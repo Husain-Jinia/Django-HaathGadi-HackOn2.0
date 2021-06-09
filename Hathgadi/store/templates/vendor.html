@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid mt-3">
+    <div class="row mx-auto">
+        {%for vendor in vendors%}
+        <div class="card mx-auto mb-3" style="width: 18rem;">
+            <img src="{{vendor.image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{vendor}}</h5>
+              <p class="card-text">Fresh fruits</p>
+              <a href="" class="btn btn-primary">Add to cart</a>
+            </div>  
+        </div>
+        {%endfor%}
+    </div>
+</div>
+{% endblock content %}
